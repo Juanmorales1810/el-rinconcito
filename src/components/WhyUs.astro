@@ -1,0 +1,67 @@
+---
+const ventajas = [
+    {
+        title: "Quincho en La Serena y Coquimbo:",
+        description:
+            "Perfecto para eventos o celebraciones familiares y de amigos. Disfruta de un espacio al aire libre con parrilla y un ambiente acogedor.",
+        image: "https://cdn.pixabay.com/photo/2016/12/06/14/33/log-cabin-1886620_1280.jpg",
+    },
+    {
+        title: "Tinajas privadas:",
+        description:
+            "Relájate con agua caliente en un entorno natural único y privado. Ideal para disfrutar en pareja o con amigos.",
+        image: "https://cdn.pixabay.com/photo/2016/12/06/14/33/log-cabin-1886620_1280.jpg",
+    },
+    {
+        title: "Valores accesibles:",
+        description:
+            "Tarifas económicas adaptadas para todos los presupuestos. Disfruta de un día de piscina, quincho y tinajas sin gastar de más.",
+        image: "https://cdn.pixabay.com/photo/2016/12/06/14/33/log-cabin-1886620_1280.jpg",
+    },
+    {
+        title: "Espacios exclusivos:",
+        description:
+            "Solo compartes con tu grupo en total privacidad. Entretenimiento y relajo asegurado en un ambiente natural y acogedor.",
+        image: "https://cdn.pixabay.com/photo/2016/12/06/14/33/log-cabin-1886620_1280.jpg",
+    },
+];
+---
+
+<section class="py-32">
+    <div class="container mx-auto">
+        <h2 class="mb-8 text-center text-4xl font-medium lg:text-7xl">
+            ¿Por Qué Elegirnos?
+        </h2>
+        <p class="mb-14 text-center text-zinc-800 text-xl font-semibold">
+            Ventajas que nos diferencian en La Serena y Coquimbo
+        </p>
+        {
+            ventajas.map((ventaja, index) => (
+                <div class="grid items-center grid-cols-1 mb-24 md:grid-cols-2 gap-y-10 md:gap-y-32 gap-x-10 md:gap-x-24 group">
+                    <div
+                        class={`order-none ${(index === 1 || index === 3) && "md:order-2"}`}
+                    >
+                        <h2 class="mb-4 text-2xl font-extrabold tracking-tight text-center text-black md:leading-tight sm:text-left md:text-4xl">
+                            {ventaja.title}
+                        </h2>
+                        <p class="mb-5 text-base text-center font-semibold text-zinc-800 sm:text-left md:text-lg">
+                            {ventaja.description}
+                        </p>
+                    </div>
+                    <div class="relative w-full h-full rounded-md">
+                        <img
+                            src={ventaja.image}
+                            alt="placeholder hero"
+                            class="w-full rounded-md object-cover"
+                        />
+                        <img
+                            src={ventaja.image}
+                            alt="placeholder hero"
+                            class="absolute inset-0 -z-10 w-full rounded-lg object-cover group-hover:blur-md transition-all"
+                        />
+                    </div>
+                </div>
+            ))
+        }
+    </div>
+</section>
