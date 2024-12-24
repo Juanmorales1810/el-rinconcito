@@ -1,15 +1,11 @@
 ---
-
+import SwiperHome from "./swiperHome";
 ---
 
 <section class="py-32 px-4 h-dvh lg:py-40">
     <div class="grid items-center gap-10 lg:grid-cols-2 lg:gap-20">
-        <div class="flex justify-end bg-zinc-100">
-            <img
-                src="https://cdn.pixabay.com/photo/2016/12/06/14/33/log-cabin-1886620_1280.jpg"
-                alt="placeholder hero"
-                class="max-h-[600px] w-full rounded-md object-cover lg:max-h-[800px]"
-            />
+        <div class="overflow-hidden rounded-lg shadow-lg lg:rounded-xl">
+            <SwiperHome client:visible />
         </div>
         <div
             class="flex flex-col items-center text-center lg:max-w-3xl lg:items-start lg:text-left"
