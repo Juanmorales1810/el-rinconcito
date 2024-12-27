@@ -43,15 +43,27 @@ export default function SwiperHome() {
 
                 {Images.map((image) => (
                     <SwiperSlide key={image.id} className="otro-swiper-slide">
-                        <picture>
-                            <source srcSet={image.webp} type="image/avif" media="(width >= 800px)" />
-                            <source srcSet={image.small} type="image/avif" media="(width <= 800px)" />
-                            <img
-                                className='max-h-[600px] w-full rounded-md object-cover lg:max-h-[800px]'
-                                src={image.webp}
-                                alt={`Imagen ${image.id}`}
-                            />
-                        </picture>
+                        <div className='relative'>
+                            <picture>
+                                <source srcSet={image.webp} type="image/avif" media="(width >= 800px)" />
+                                <source srcSet={image.small} type="image/avif" media="(width <= 800px)" />
+                                <img
+                                    className='max-h-[600px] w-full rounded-md object-cover lg:max-h-[800px]'
+                                    src={image.webp}
+                                    alt={`Imagen ${image.id}`}
+                                />
+                            </picture>
+                            <div className='absolute top-0 left-0 p-8 w-full h-full bg-black bg-opacity-70 flex flex-col items-end justify-end [mask-image:radial-gradient(ellipse_120%_100%_at_10%_160%,#000_90%,transparent_110%)]'>
+                            </div>
+                            <div className='absolute top-0 left-0 p-8 w-full h-full flex flex-col items-start justify-end'>
+                                <p className='text-white text-2xl font-bold'>
+                                    Algún texto principal de descripción
+                                </p>
+                                <p className='text-white text-lg'>
+                                    Algún texto secundario de descripción
+                                </p>
+                            </div>
+                        </div>
                     </SwiperSlide>
                 ))}
 
