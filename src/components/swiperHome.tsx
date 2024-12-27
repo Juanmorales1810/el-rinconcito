@@ -56,10 +56,10 @@ export default function SwiperHome() {
                             <div className='absolute top-0 left-0 p-8 w-full h-full bg-black bg-opacity-70 flex flex-col items-end justify-end [mask-image:radial-gradient(ellipse_120%_100%_at_10%_160%,#000_90%,transparent_110%)]'>
                             </div>
                             <div className='absolute top-0 left-0 p-8 w-full h-full flex flex-col items-start justify-end'>
-                                <p className='text-white text-2xl font-bold'>
+                                <p className='text-white text-lg font-bold md:text-2xl'>
                                     Algún texto principal de descripción
                                 </p>
-                                <p className='text-white text-lg'>
+                                <p className='text-white text-xs md:text-base'>
                                     Algún texto secundario de descripción
                                 </p>
                             </div>
