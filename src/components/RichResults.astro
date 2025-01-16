@@ -1,0 +1,24 @@
+---
+// import { BOXERS } from "@/consts/boxers"
+
+/** https://developers.google.com/search/docs/appearance/structured-data/organization */
+const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    url: "https://www.elrinconcitoquincho.cl/",
+    image: "https://jireh-english.vercel.app/Img/metadata.jpg",
+    sameAs: ["https://www.instagram.com/elrinconcito_quincho/"],
+    logo: "https://jireh-english.vercel.app/Img/metadata.jpg",
+    name: "El Rinconcito",
+    email: "reservaelrinconcito@gmail.com",
+    telephone: "+56997364529",
+    alternateName: "El Rinconcito",
+    description:
+        "Aprende inglés con clases personalizadas para minería, negocios y viajes en La Serena. Contáctanos hoy y mejora tu fluidez con un profesor de inglés nativo.",
+};
+---
+
+<script
+    type="application/ld+json"
+    set:html={JSON.stringify(organizationSchema)}
+/>
