@@ -26,10 +26,10 @@ const ContactForm = () => {
     const onSubmit = async (data: FormData): Promise<void> => {
         try {
             const result: EmailJSResponseStatus = await emailjs.send(
-                "service_5se41gu",
-                "template_rg34xt8",
+                "service_030zqau",
+                "template_yhznjcb",
                 data,
-                "nzfKdp7ymZzA0-8K_"
+                "zJ3yO6o7i-pfodMHr"
             );
             console.log("Mensaje enviado con éxito:", result);
             reset();
