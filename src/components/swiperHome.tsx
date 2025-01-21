@@ -15,9 +15,34 @@ import { EffectCreative, Autoplay } from 'swiper/modules';
 
 export default function SwiperHome() {
     const Images = [
-        { id: 1, webp: 'https://cdn.pixabay.com/photo/2016/12/06/14/33/log-cabin-1886620_1280.jpg', small: 'https://cdn.pixabay.com/photo/2016/12/06/14/33/log-cabin-1886620_1280.jpg' },
-        { id: 2, webp: 'https://cdn.pixabay.com/photo/2016/12/06/14/33/log-cabin-1886620_1280.jpg', small: 'https://cdn.pixabay.com/photo/2016/12/06/14/33/log-cabin-1886620_1280.jpg' },
-        { id: 3, webp: 'https://cdn.pixabay.com/photo/2016/12/06/14/33/log-cabin-1886620_1280.jpg', small: 'https://cdn.pixabay.com/photo/2016/12/06/14/33/log-cabin-1886620_1280.jpg' },
+        {
+            id: 1,
+            webp: '/img/hero/Fotos_Oficiales-138.avif',
+            small: '/img/hero/Fotos_Oficiales-138.avif',
+            title: 'Relaja tu mente y cuerpo',
+            description: 'Contamos con un espacio diseñado para que puedas relajarte y disfrutar de un momento de paz y tranquilidad. Ven y conócenos.'
+        },
+        {
+            id: 2,
+            webp: '/img/hero/Fotos_Oficiales-30.avif',
+            small: '/img/hero/Fotos_Oficiales-30.avif',
+            title: 'Disfruta de un momento con tu familia',
+            description: 'Tenemos todo lo que necesitas para disfrutar de un momento en familia.'
+        },
+        {
+            id: 3,
+            webp: '/img/hero/Fotos_Oficiales-58.avif',
+            small: '/img/hero/Fotos_Oficiales-58.avif',
+            title: 'Distintas actividades para ti',
+            description: 'Contamos con distintas actividades para que puedas disfrutar de un momento agradable.'
+        },
+        {
+            id: 4,
+            webp: '/img/hero/Fotos_Oficiales-85.avif',
+            small: '/img/hero/Fotos_Oficiales-85.avif',
+            title: 'Disfruta de un momento de paz',
+            description: 'Ven y disfruta de un momento de paz y tranquilidad en nuestro espacio.'
+        },
     ]
     return (
         <>
@@ -57,10 +82,10 @@ export default function SwiperHome() {
                             </div>
                             <div className='absolute top-0 left-0 p-8 w-full h-full flex flex-col items-start justify-end'>
                                 <p className='text-white text-lg font-bold md:text-2xl'>
-                                    Algún texto principal de descripción
+                                    {image.title}
                                 </p>
                                 <p className='text-white text-xs md:text-base'>
-                                    Algún texto secundario de descripción
+                                    {image.description}
                                 </p>
                             </div>
                         </div>
