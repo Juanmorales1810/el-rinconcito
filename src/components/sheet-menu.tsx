@@ -1,18 +1,18 @@
 import { Button } from "@/components/ui/button"
 import {
     Sheet,
-    SheetClose,
     SheetContent,
     SheetDescription,
-    SheetFooter,
     SheetHeader,
     SheetTitle,
     SheetTrigger,
 } from "@/components/ui/sheet"
+import { useState } from "react";
 
 export function SheetMenu() {
+    const [open, setOpen] = useState(false);
     return (
-        <Sheet>
+        <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild>
                 <Button variant="outline">
                     <svg
@@ -21,22 +21,29 @@ export function SheetMenu() {
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
-                        stroke-width="2"
+                        strokeWidth="2"
                     >
                         <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
                             d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
                 </Button>
             </SheetTrigger>
             <SheetContent>
+                <SheetHeader>
+                    <SheetTitle>El Rinconcito</SheetTitle>
+                    <SheetDescription>
+
+                    </SheetDescription>
+                </SheetHeader>
                 <nav aria-label="Global">
                     <ul className="flex flex-col items-start font-bold gap-6 text-xl">
                         <li>
                             <a
                                 className="text-zinc-900 transition hover:text-zinc-900/75 font-semibold"
                                 href="#hero"
+                                onClick={() => setOpen(false)}
                             >
                                 Home
                             </a>
@@ -46,6 +53,7 @@ export function SheetMenu() {
                             <a
                                 className="text-zinc-900 transition hover:text-zinc-900/75 font-semibold"
                                 href="#Descriptions"
+                                onClick={() => setOpen(false)}
                             >
                                 Descripción
                             </a>
@@ -55,6 +63,7 @@ export function SheetMenu() {
                             <a
                                 className="text-zinc-900 transition hover:text-zinc-900/75 font-semibold"
                                 href="#WhyUs"
+                                onClick={() => setOpen(false)}
                             >
                                 Porque elegirnos
                             </a>
@@ -64,6 +73,7 @@ export function SheetMenu() {
                             <a
                                 className="text-zinc-900 transition hover:text-zinc-900/75 font-semibold"
                                 href="#Service"
+                                onClick={() => setOpen(false)}
                             >
                                 Servicios
                             </a>
@@ -73,6 +83,7 @@ export function SheetMenu() {
                             <a
                                 className="text-zinc-900 transition hover:text-zinc-900/75 font-semibold"
                                 href="#Testimonials"
+                                onClick={() => setOpen(false)}
                             >
                                 Testimonios
                             </a>
@@ -82,6 +93,7 @@ export function SheetMenu() {
                             <a
                                 className="text-zinc-900 transition hover:text-zinc-900/75 font-semibold"
                                 href="#Reserva"
+                                onClick={() => setOpen(false)}
                             >
                                 Contáctenos
                             </a>
@@ -90,6 +102,7 @@ export function SheetMenu() {
                             <a
                                 className="text-zinc-900 transition hover:text-zinc-900/75 font-semibold"
                                 href="#Faqs"
+                                onClick={() => setOpen(false)}
                             >
                                 Pregunta frecuentes
                             </a>
