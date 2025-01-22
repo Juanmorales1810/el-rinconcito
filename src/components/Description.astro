@@ -5,9 +5,14 @@
 <section id="Descriptions" class="py-12">
     <div class="container mx-auto">
         <div
-            class="flex flex-col items-center justify-between gap-8 rounded-lg bg-zinc-100 p-6 md:flex-row lg:px-20 lg:py-16 hover:shadow-lg transition-shadow"
+            class="relative flex flex-col items-center justify-between gap-8 bg-zinc-100 rounded-lg p-6 overflow-hidden md:flex-row md:bg-none lg:px-20 lg:py-16 hover:shadow-lg transition-shadow"
         >
-            <div class="w-full">
+            <img
+                class="absolute z-0 inset-0 object-cover w-full h-full rounded-lg opacity-30 grayscale md:hidden"
+                src="/img/description/tinaja.avif"
+                alt="Amigas disfrutando de la tinaja"
+            />
+            <div class="relative z-10 w-full">
                 <h4 class="mb-4 text-2xl font-bold md:text-3xl text-balance">
                     Disfruta de un espacio único con piscina y tinaja en La
                     Serena y Coquimbo
@@ -39,7 +44,7 @@
                     </svg>
                 </a>
             </div>
-            <div class="w-full">
+            <div class="relative z-10 w-full">
                 <ul
                     class="space-y-2 text-sm font-medium sm:text-base lg:text-lg"
                 >
