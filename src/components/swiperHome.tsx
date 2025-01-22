@@ -17,10 +17,10 @@ export default function SwiperHome() {
     const Images = [
         {
             id: 1,
-            webp: '/img/hero/Fotos_Oficiales-138.avif',
-            small: '/img/hero/Fotos_Oficiales-138.avif',
-            title: 'Relaja tu mente y cuerpo',
-            description: 'Contamos con un espacio diseñado para que puedas relajarte y disfrutar de un momento de paz y tranquilidad. Ven y conócenos.'
+            webp: '/img/hero/Fotos_Oficiales-1.avif',
+            small: '/img/hero/Fotos_Oficiales-1.avif',
+            title: 'Piscina amplia y cómoda',
+            description: 'Ven y disfruta de nuestra piscina, diseñada para que puedas disfrutar de un momento agradable y relajante.'
         },
         {
             id: 2,
@@ -42,6 +42,13 @@ export default function SwiperHome() {
             small: '/img/hero/Fotos_Oficiales-85.avif',
             title: 'Disfruta de un momento de paz',
             description: 'Ven y disfruta de un momento de paz y tranquilidad en nuestro espacio.'
+        },
+        {
+            id: 5,
+            webp: '/img/hero/Fotos_Oficiales-138.avif',
+            small: '/img/hero/Fotos_Oficiales-138.avif',
+            title: 'Relaja tu mente y cuerpo',
+            description: 'Contamos con un espacio diseñado para que puedas relajarte y disfrutar de un momento de paz y tranquilidad. Ven y conócenos.'
         },
     ]
     return (
