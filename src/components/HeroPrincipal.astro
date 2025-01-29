@@ -1,0 +1,48 @@
+---
+
+---
+
+<section
+    id="Inicio"
+    class="relative h-[100dvh] w-full flex flex-col justify-center text-zinc-50 items-center text-center"
+>
+    <div class="h-[100dvh] w-full z-10 brightness-75">
+        <picture>
+            <source
+                srcset="/img/hero/Fotos_Oficiales-1.avif"
+                type="image/avif"
+                media="(width >= 800px)"
+            />
+            <source
+                srcset="/img/hero/Fotos_Oficiales-1.avif"
+                type="image/avif"
+                media="(width <= 800px)"
+            />
+            <img
+                class="w-full object-cover h-[100dvh]"
+                src="/img/hero/Fotos_Oficiales-1.avif"
+                alt={`Imagen de la piscina`}
+            />
+        </picture>
+    </div>
+    <div
+        class="flex flex-col justify-start items-center h-[80dvh] w-full max-w-5xl z-30 absolute bottom-24 left-[0%] lg:left-[calc(50%-512px)] lg:top-1/2 lg:h-auto lg:justify-center"
+    >
+        <h2
+            class="text-3xl lg:text-7xl mb-4 font-bold drop-shadow-[0_0px_7px_rgba(255,255,255,0.35)]"
+        >
+            El Rinconcito
+        </h2>
+        <h3
+            class="text-xl md:text-2xl mb-8 font-medium drop-shadow-[0_0px_7px_rgba(0,0,0,0.75)]"
+        >
+            Piscinas, Quincho y Tinajas Privadas
+        </h3>
+        <a
+            href="#Contacto"
+            class="h-9 px-4 py-2 bg-primary text-primary-foreground shadow hover:bg-primary/90 inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 hover:drop-shadow-[0_0px_7px_rgba(255,255,255,0.75)]"
+        >
+            Reserva ahora
+        </a>
+    </div>
+</section>
