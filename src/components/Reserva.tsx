@@ -1,42 +1,6 @@
-import { useForm } from "react-hook-form";
-import emailjs from '@emailjs/browser';
 import { Button } from "./ui/button";
 
 const ContactForm = () => {
-    const {
-        register,
-        handleSubmit,
-        reset,
-        formState: { errors },
-    } = useForm<FormData>();
-
-    interface FormData {
-        name: string;
-        email: string;
-        phone: string;
-        message: string;
-        [key: string]: unknown;
-    }
-
-    interface EmailJSResponseStatus {
-        status: number;
-        text: string;
-    }
-
-    const onSubmit = async (data: FormData): Promise<void> => {
-        try {
-            const result: EmailJSResponseStatus = await emailjs.send(
-                "service_030zqau",
-                "template_yhznjcb",
-                data,
-                "zJ3yO6o7i-pfodMHr"
-            );
-            console.log("Mensaje enviado con éxito:", result);
-            reset();
-        } catch (error) {
-            console.error("Error al enviar el mensaje:", error);
-        }
-    };
 
     return (
         <section id="Reserva" className="bg-white container mx-auto px-4 py-12 rounded-md shadow-md">
@@ -75,10 +39,9 @@ const ContactForm = () => {
                         </h2>
 
                         <p className="mt-4 leading-relaxed text-white/90">
-                            Si estás listo para llevar tu inglés al siguiente nivel,
-                            ponte en contacto con nosotros. Te ayudaremos a
-                            encontrar el curso que mejor se adapte a tus
-                            necesidades.
+                            Disponible  Quincho de Lunes a Domingo de 10:00 a 19:00
+                            Tinaja de lunes a domingo   desde las 16:00 o según  disponibilidad.
+
                         </p>
                     </div>
                 </section>
@@ -117,111 +80,31 @@ const ContactForm = () => {
                             </h1>
 
                             <p className="mt-4 leading-relaxed text-gray-500">
-                                Si estás listo para llevar tu inglés al siguiente nivel,
-                                ponte en contacto con nosotros. Te ayudaremos a
-                                encontrar el curso que mejor se adapte a tus
-                                necesidades.
+                                Disponible  Quincho de Lunes a Domingo de 10:00 a 19:00
+                                Tinaja de lunes a domingo   desde las 16:00 o según  disponibilidad.
+
                             </p>
                         </div>
 
-                        <form
-                            onSubmit={handleSubmit(onSubmit)}
-                            className="mx-auto w-full text-black mt-8"
+                        <div
+                            className="relative mx-auto w-full text-black mt-8"
                         >
-                            <div className="mb-4">
-                                <label
-                                    htmlFor="name"
-                                    className="block text-sm font-medium text-gray-700"
-                                >
-                                    Nombre
-                                </label>
-                                <input
-                                    type="text"
-                                    id="name"
-                                    {...register("name", {
-                                        required: "El nombre es requerido",
-                                    })}
-                                    className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2"
-                                />
-                                {errors.name && (
-                                    <span className="text-red-500">
-                                        {typeof errors.name?.message === 'string' && errors.name.message}
-                                    </span>
-                                )}
+
+                            <div className="h-full [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_80%,transparent_100%)] opacity-50">
+                                <img
+                                    className="w-full h-[50vh] object-cover md:h-screen"
+                                    src="/img/contact/Región de Coquimbo.webp"
+                                    alt="Region de Coquimbo" />
                             </div>
-                            <div className="mb-4">
-                                <label
-                                    htmlFor="email"
-                                    className="block text-sm font-medium text-gray-700"
-                                >
-                                    Correo electrónico
-                                </label>
-                                <input
-                                    type="email"
-                                    id="email"
-                                    {...register("email", {
-                                        required: "El correo electrónico es requerido",
-                                        pattern: {
-                                            value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-                                            message: "Formato de correo inválido",
-                                        },
-                                    })}
-                                    className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2"
-                                />
-                                {errors.email && (
-                                    <span className="text-red-500">
-                                        {typeof errors.email?.message === 'string' && errors.email.message}
-                                    </span>
-                                )}
-                            </div>
-                            <div className="mb-4">
-                                <label
-                                    htmlFor="phone"
-                                    className="block text-sm font-medium text-gray-700"
-                                >
-                                    Teléfono
-                                </label>
-                                <input
-                                    type="tel"
-                                    id="phone"
-                                    {...register("phone", {
-                                        required: "El teléfono es requerido",
-                                    })}
-                                    className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2"
-                                />
-                                {errors.phone && (
-                                    <span className="text-red-500">
-                                        {typeof errors.phone?.message === 'string' && errors.phone.message}
-                                    </span>
-                                )}
-                            </div>
-                            <div className="mb-4">
-                                <label
-                                    htmlFor="message"
-                                    className="block text-sm font-medium text-gray-700"
-                                >
-                                    Mensaje
-                                </label>
-                                <textarea
-                                    id="message"
-                                    rows={4}
-                                    {...register("message", {
-                                        required: "El mensaje es requerido",
-                                    })}
-                                    className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 text-zinc-950"
-                                ></textarea>
-                                {errors.message && (
-                                    <span className="text-red-500">
-                                        {typeof errors.message?.message === 'string' && errors.message.message}
-                                    </span>
-                                )}
-                            </div>
-                            <div className="flex flex-col gap-2 items-center md:justify-between md:flex-row">
+                            <div className="absolute top-1/2 w-full flex flex-col gap-2 items-center md:justify-between md:flex-row">
                                 <Button
-                                    type="submit"
+                                    asChild
                                     className="bg-blue-500 text-white px-4 py-2 rounded-md shadow-sm hover:bg-blue-600"
                                 >
-                                    Enviar
+                                    <a href="https://www.google.com/maps/place/Quinchos+y+Piscinas+El+Rinconcito/data=!4m2!3m1!1s0x0:0xd9c35b6a54451f8f?sa=X&ved=1t:2428&hl=es&ictx=111">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="800px" height="800px" viewBox="0 0 192 192" fill="none"><path stroke="#FFFFFF" fill="#FFFFFF" strokeWidth="12" d="M96 22a51.88 51.88 0 0 0-36.77 15.303A52.368 52.368 0 0 0 44 74.246c0 16.596 4.296 28.669 20.811 48.898a163.733 163.733 0 0 1 20.053 28.38C90.852 163.721 90.146 172 96 172c5.854 0 5.148-8.279 11.136-20.476a163.723 163.723 0 0 1 20.053-28.38C143.704 102.915 148 90.841 148 74.246a52.37 52.37 0 0 0-15.23-36.943A51.88 51.88 0 0 0 96 22Z" /><circle cx="96" cy="74" r="20" stroke="#2563eb" fill="#2563eb" strokeWidth="12" /></svg>
+                                        Buscanos en Google Maps
+                                    </a>
                                 </Button>
                                 <Button
                                     asChild
@@ -262,7 +145,7 @@ const ContactForm = () => {
                                     </a>
                                 </Button>
                             </div>
-                        </form>
+                        </div>
                     </div>
                 </main>
             </div>
