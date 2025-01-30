@@ -17,36 +17,36 @@ export default function SwiperHome() {
     const Images = [
         {
             id: 1,
-            webp: '/img/hero/Fotos_Oficiales-1.avif',
-            small: '/img/hero/Fotos_Oficiales-1.avif',
+            webp: '/img/hero/Fotos Oficiales-2.avif',
+            small: '/img/hero/Fotos Oficiales-2.avif',
             title: 'Piscina amplia y cómoda',
             description: 'Ven y disfruta de nuestra piscina, diseñada para que puedas disfrutar de un momento agradable y relajante.'
         },
         {
             id: 2,
-            webp: '/img/hero/Fotos_Oficiales-30.avif',
-            small: '/img/hero/Fotos_Oficiales-30.avif',
+            webp: '/img/hero/Fotos Oficiales-3.avif',
+            small: '/img/hero/Fotos Oficiales-3.avif',
             title: 'Disfruta de un momento con tu familia',
             description: 'Tenemos todo lo que necesitas para disfrutar de un momento en familia.'
         },
         {
             id: 3,
-            webp: '/img/hero/Fotos_Oficiales-58.avif',
-            small: '/img/hero/Fotos_Oficiales-58.avif',
+            webp: '/img/hero/Fotos Oficiales-4.avif',
+            small: '/img/hero/Fotos Oficiales-4.avif',
             title: 'Distintas actividades para ti',
             description: 'Contamos con distintas actividades para que puedas disfrutar de un momento agradable.'
         },
         {
             id: 4,
-            webp: '/img/hero/Fotos_Oficiales-85.avif',
-            small: '/img/hero/Fotos_Oficiales-85.avif',
+            webp: '/img/hero/Fotos Oficiales-115.avif',
+            small: '/img/hero/Fotos Oficiales-115.avif',
             title: 'Disfruta de un momento de paz',
             description: 'Ven y disfruta de un momento de paz y tranquilidad en nuestro espacio.'
         },
         {
             id: 5,
-            webp: '/img/hero/Fotos_Oficiales-138.avif',
-            small: '/img/hero/Fotos_Oficiales-138.avif',
+            webp: '/img/hero/Fotos Oficiales.avif',
+            small: '/img/hero/Fotos Oficiales.avif',
             title: 'Relaja tu mente y cuerpo',
             description: 'Contamos con un espacio diseñado para que puedas relajarte y disfrutar de un momento de paz y tranquilidad. Ven y conócenos.'
         },
