@@ -1,0 +1,39 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import { type CollectionEntry, getCollection } from "astro:content";
+
+import { render } from "astro:content";
+
+export async function getStaticPaths() {
+    const posts = await getCollection("blog");
+    return posts.map((post) => ({
+        params: { slug: post.id },
+        props: post,
+    }));
+}
+type Props = CollectionEntry<"blog">;
+
+const post = Astro.props;
+const { Content } = await render(post);
+---
+
+<Layout title={post.data.title} description={post.data.description}>
+    <section class="py-10 px-4">
+        <div class="container max-w-5xl mx-auto mt-16">
+            <img
+                class="aspect-[10/7] object-cover rounded-xl md:aspect-[16/7] h-[440px] mx-auto"
+                src={post.data.heroImage}
+                alt={post.data.title}
+                transition:name={`img${post.id}`}
+            />
+            <h1
+                class="text-black text-center text-5xl py-8 font-bold drop-shadow-[0_0px_7px_rgba(255,255,255,0.35)]"
+            >
+                {post.data.title}
+            </h1>
+            <div class="text-black prose mx-auto py-6 max-w-4xl">
+                <Content />
+            </div>
+        </div>
+    </section>
+</Layout>
