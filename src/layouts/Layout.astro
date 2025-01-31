@@ -2,6 +2,7 @@
 import SEO from "@/components/SEO.astro";
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
+import { ClientRouter } from "astro:transitions";
 
 interface Preload {
     as: string;
@@ -20,6 +21,7 @@ interface Props {
 }
 
 const { title, description, preload, canonical, image } = Astro.props;
+import "@/styles/globals.css";
 ---
 
 <!doctype html>
@@ -32,6 +34,7 @@ const { title, description, preload, canonical, image } = Astro.props;
             preload={preload}
             title={title}
         />
+        <ClientRouter />
     </head>
     <body
         class="relative -z-30 antialiased flex flex-col min-h-screen bg-lime-100"
