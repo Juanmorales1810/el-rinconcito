@@ -42,7 +42,7 @@ export function SheetMenu() {
                         <li>
                             <a
                                 className="text-zinc-900 transition hover:text-zinc-900/75 font-semibold"
-                                href="#hero"
+                                href="/#hero"
                                 onClick={() => setOpen(false)}
                             >
                                 Home
@@ -52,7 +52,7 @@ export function SheetMenu() {
                         <li>
                             <a
                                 className="text-zinc-900 transition hover:text-zinc-900/75 font-semibold"
-                                href="#Descriptions"
+                                href="/#Descriptions"
                                 onClick={() => setOpen(false)}
                             >
                                 Descripción
@@ -62,7 +62,7 @@ export function SheetMenu() {
                         <li>
                             <a
                                 className="text-zinc-900 transition hover:text-zinc-900/75 font-semibold"
-                                href="#WhyUs"
+                                href="/#WhyUs"
                                 onClick={() => setOpen(false)}
                             >
                                 Porque elegirnos
@@ -72,7 +72,7 @@ export function SheetMenu() {
                         <li>
                             <a
                                 className="text-zinc-900 transition hover:text-zinc-900/75 font-semibold"
-                                href="#Service"
+                                href="/#Service"
                                 onClick={() => setOpen(false)}
                             >
                                 Servicios
@@ -82,7 +82,7 @@ export function SheetMenu() {
                         <li>
                             <a
                                 className="text-zinc-900 transition hover:text-zinc-900/75 font-semibold"
-                                href="#Testimonials"
+                                href="/#Testimonials"
                                 onClick={() => setOpen(false)}
                             >
                                 Testimonios
@@ -92,7 +92,7 @@ export function SheetMenu() {
                         <li>
                             <a
                                 className="text-zinc-900 transition hover:text-zinc-900/75 font-semibold"
-                                href="#Reserva"
+                                href="/#Reserva"
                                 onClick={() => setOpen(false)}
                             >
                                 Contáctenos
@@ -101,7 +101,7 @@ export function SheetMenu() {
                         <li>
                             <a
                                 className="text-zinc-900 transition hover:text-zinc-900/75 font-semibold"
-                                href="#Faqs"
+                                href="/#Faqs"
                                 onClick={() => setOpen(false)}
                             >
                                 Pregunta frecuentes
